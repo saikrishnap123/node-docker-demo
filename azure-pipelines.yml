@@ -21,12 +21,8 @@ steps:
   displayName: 'npm install and build'
 - task: Docker@2
   inputs:
-    containerRegistry: 'svc-acr'
-    repository: 'acrdev184'
-    command: 'build'
-    Dockerfile: '**/Dockerfile' 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'svc-acr'
+    repository: 'acrdev234'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
     repository: 'acrdev184'
     command: 'push'
